@@ -1,0 +1,20 @@
+<mat-sidenav-container>
+  <div class="frame">
+    <div class="title">
+      <img src="/assets/icons/app-icon.png" alt="Some app shit" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        consequatur quod ipsam dignissimos nobis possimus ratione repellat
+        explicabo maxime blanditiis, minima rerum sit animi perferendis nostrum
+        tempore nemo molestiae culpa.
+      </p>
+    </div>
+    <div class="controls">
+      <div (click)="devTools()"></div>
+      <div class="minimize" (click)="minimize()"></div>
+      <div class="maximize" (click)="maximize()"></div>
+      <div class="exit" (click)="exit()"></div>
+    </div>
+  </div>
+  <div class="app"><router-outlet></router-outlet></div>
+</mat-sidenav-container>

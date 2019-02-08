@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  mat-card {
+    max-width: 400px;
+    margin: 8px;
+
+    .buttons {
+      display: flex;
+      white-space: nowrap;
+      justify-content: space-evenly;
+    }
+  }
+}

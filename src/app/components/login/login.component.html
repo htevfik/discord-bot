@@ -1,0 +1,11 @@
+<app-flex-center>
+  <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <mat-form-field>
+      <input matInput formControlName="token" placeholder="Token">
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary" [disabled]="loginForm.invalid || pending">
+      Giriş yap
+    </button>
+  </form>
+</app-flex-center>

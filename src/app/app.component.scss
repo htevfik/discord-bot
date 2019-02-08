@@ -1,0 +1,92 @@
+:host {
+  &,
+  mat-sidenav-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  mat-sidenav-container {
+    .frame {
+      min-height: 20px;
+      color: rgba(#fff, 0.9);
+      padding: 5px;
+      background-image: linear-gradient(to right, #c33764, #1d2671);
+
+      &,
+      .title,
+      .controls {
+        display: flex;
+        align-items: center;
+      }
+
+      .title {
+        min-width: 0;
+        flex: 1;
+        -webkit-app-region: drag;
+
+        img {
+          width: 24px;
+          max-height: 24px;
+        }
+
+        p {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin: 0;
+          margin-left: 5px;
+        }
+      }
+
+      .controls {
+        margin-left: 10px;
+
+        div {
+          $radius: 7px;
+          width: $radius * 2;
+          height: $radius * 2;
+          opacity: 0.7;
+          margin: 0 5px;
+          border-radius: $radius;
+          background-color: rgba(#000, 0.16);
+          transition: transform 0.2s, opacity 0.6s;
+
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+
+          &.minimize {
+            background-color: rgb(66, 132, 255);
+          }
+
+          &.maximize {
+            background-color: rgb(255, 136, 0);
+          }
+
+          &.exit {
+            background-color: rgb(238, 29, 29);
+          }
+        }
+      }
+    }
+
+    .app {
+      flex: 1;
+      padding: 12px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      // align-items: stretch;
+    }
+  }
+}
